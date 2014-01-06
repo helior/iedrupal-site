@@ -1,0 +1,56 @@
+/* Header */
+section.header {
+	position:relative;
+}
+
+.bg-cover {
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center bottom;
+	width: 100%;
+	height:100vh;
+	min-height:450px;
+}
+@media only screen and (min-width:768px) {
+	.bg-cover {min-height: 500px;}
+}
+@media only screen and (min-width:1024px) {
+	.bg-cover {min-height: 650px;}
+}
+section.header h1 {
+	pointer-events: none;
+	left:0;
+	top:40%;
+	width:100%;
+	z-index:5;
+	position:absolute;
+	padding-left:5%;
+	padding-right:5%;
+}
+@media only screen and (min-width:768px) {
+	section.header h1 {
+		pointer-events:auto;
+	}
+}
+
+section.header h1.small-header {
+	top:45%;
+}
+
+.header-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	width: 100%;
+	height:200px;
+}
+@media only screen and (min-width:768px) {
+	.header-bg {
+		height:300px;
+	}
+}
+@media only screen and (min-width:1024px) {
+	.header-bg {
+		height:400px;
+	}
+}
