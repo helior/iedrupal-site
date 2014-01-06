@@ -7,5 +7,5 @@ Website for the Inland Empire Drupal community.
 
 
 #### TODO:
-* Automated builder script for production deploys.
-* Travis CI integration.
+- Automated builder script for production deploys.
+- add `misc` directory for files to copy to www.
