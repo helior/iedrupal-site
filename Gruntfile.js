@@ -10,6 +10,15 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         }
       },
+      dev: {
+        options: {
+          environment: 'development',
+          config: 'src/stylesheets/config.rb',
+          basePath: 'src/stylesheets',
+          outputStyle: 'nested'
+        }
+      }
+    },
     
     uglify: {
       prod: {
@@ -63,4 +72,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   grunt.registerTask('prod', ['compass:prod', 'uglify:prod', 'htmlmin:prod', 'imagemin:prod']);
+  grunt.registerTask('dev', ['compass:dev']);
 }
