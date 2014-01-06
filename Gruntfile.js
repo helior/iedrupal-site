@@ -9,11 +9,26 @@ module.exports = function(grunt) {
           basePath: 'src/stylesheets',
           outputStyle: 'compressed'
         }
+      },
+    
+    uglify: {
+      prod: {
+        options: {
+          compress: true,
+          preserveComments: false
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/scripts',
+          src: '**/*.js',
+          dest: 'www/assets/js'
+        }]
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('prod', ['compass:prod']);
+  grunt.registerTask('prod', ['compass:prod', 'uglify:prod']);
 }
