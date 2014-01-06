@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "19c8e79a1386809dfdd49a45a0af4c8b",
+    "hash": "7917fbefc43b23ae58475a42e26d4656",
     "packages": [
         {
             "name": "leafo/lessphp",
@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Pawka/phrozn.git",
-                "reference": "01b30e76da89da8637bd27e1057f89d166f1cba2"
+                "reference": "a9be165f0c1210d6badba833653706e4ce95aa7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Pawka/phrozn/zipball/01b30e76da89da8637bd27e1057f89d166f1cba2",
-                "reference": "01b30e76da89da8637bd27e1057f89d166f1cba2",
+                "url": "https://api.github.com/repos/Pawka/phrozn/zipball/a9be165f0c1210d6badba833653706e4ce95aa7f",
+                "reference": "a9be165f0c1210d6badba833653706e4ce95aa7f",
                 "shasum": ""
             },
             "require": {
@@ -184,7 +184,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Static Site Generator for PHP",
-            "time": "2014-01-04 12:37:04"
+            "time": "2014-01-06 08:06:59"
         },
         {
             "name": "pear/archive_tar",
@@ -527,9 +527,7 @@
             "time": "2013-04-08 12:40:11"
         }
     ],
-    "packages-dev": [
-
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],

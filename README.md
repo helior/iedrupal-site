@@ -8,4 +8,5 @@ Website for the Inland Empire Drupal community.
 
 #### TODO:
 - Automated builder script for production deploys.
+- phpunit tests.
 - add `misc` directory for files to copy to www.

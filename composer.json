@@ -11,5 +11,13 @@
     "require": {
       "pawka/phrozn": "dev-master"
     },
-    "minimum-stability": "dev"
+    "require-dev": {
+      "phpunit/phpunit": "3.7.*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+      "psr-0": {
+        "tests": ""
+      }
+    }
 }
