@@ -1,4 +1,8 @@
 Inland Empire Drupal site
 =============
+Website for the Inland Empire Drupal community.
 
-Website for Inland Empire Drupal local meet-ups
+
+#### TODO:
+* Automated builder script for production deploys.
+* Travis CI integration.
