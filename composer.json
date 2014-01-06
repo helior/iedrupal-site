@@ -1,23 +1,23 @@
 {
   "name": "helior/iedrupal-site",
-    "description": "IE Drupal site",
-    "authors": [
-      {
-        "name": "Helior Colorado",
-        "email": "me@helior.info",
-        "homepage": "helior.info"
-      }
-    ],
-    "require": {
-      "pawka/phrozn": "dev-master"
-    },
-    "require-dev": {
-      "phpunit/phpunit": "3.7.*"
-    },
-    "minimum-stability": "dev",
-    "autoload": {
-      "psr-0": {
-        "tests": ""
-      }
+  "description": "IE Drupal site",
+  "authors": [
+    {
+      "name": "Helior Colorado",
+      "email": "me@helior.info",
+      "homepage": "helior.info"
     }
+  ],
+  "require": {
+    "pawka/phrozn": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "tests": ""
+    }
+  }
 }

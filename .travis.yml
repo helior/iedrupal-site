@@ -9,5 +9,5 @@ before_install:
   - npm install
   - bundle install
   - mkdir www
-install: ./vendor/pawka/phrozn/bin/phr.php build src &&  grunt prod
+install: ./vendor/pawka/phrozn/bin/phr.php build src && grunt prod
 script: true
