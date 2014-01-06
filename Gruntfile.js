@@ -73,4 +73,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('prod', ['compass:prod', 'uglify:prod', 'htmlmin:prod', 'imagemin:prod']);
   grunt.registerTask('dev', ['compass:dev']);
+  grunt.registerTask('default', 'Does nothing.', function() {grunt.log.writeln('Available tasks to run are "prod" and "dev".')});
 }
