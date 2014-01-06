@@ -4,9 +4,10 @@ php:
 branches:
   only:
     - master
-before_script:
+before_install:
   - composer install
   - npm install
   - bundle install
   - mkdir www
-  - ./vendor/pawka/phrozn/bin/phr.php build src &&  grunt prod
+install: ./vendor/pawka/phrozn/bin/phr.php build src &&  grunt prod
+script: true
