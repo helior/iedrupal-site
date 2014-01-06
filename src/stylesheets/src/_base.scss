@@ -1,0 +1,78 @@
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	direction: ltr;
+}
+a {
+	color:#ef621c;
+	text-decoration:none;
+	line-height:inherit;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: "Montserrat","Helvetica","Arial";
+	font-weight: normal;
+	font-style: normal;
+	color: #3a3a3a;
+	text-rendering: optimizeLegibility;
+	margin-top: 0;
+	margin-bottom: 1em;
+	line-height: 1.3125em;
+}
+@media only screen and (min-width:768px) {
+	h1, h2, h3, h4, h5, h6{
+		line-height:1.5;
+	}
+}
+h1 {
+	color:#fff;
+	text-align:center;
+	text-transform:uppercase;
+	line-height:1.6;
+	font-size:20px;
+}
+h2 {
+	text-align:center;
+	line-height:1.7;
+	font-size:18px;
+}
+h3{
+	line-height: 1.7;
+	font-size: 16px;
+}
+@media only screen and (min-width:768px) {
+	h1 {font-size:28px;white-space:pre-line;}
+	h2{
+		font-size:20px;
+		-webkit-text-stroke:0.5px;
+	}
+	h3{
+		font-size: 1.125em;
+	}
+}
+@media only screen and (min-width:1024px) {
+	h1 {font-size:43px;}
+	h2 {
+		font-size:22px;
+		white-space:pre-line;
+	}
+}
+@media only screen and (min-width:1280px) {
+	h1 {font-size:50px;}
+	h2 {
+		font-size:24px;
+	}
+}
+
+
+body {
+	background: #f5f6f6;
+	color: #999;
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans","Helvetica","Arial";
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	position: relative;
+	cursor: default;
+}
