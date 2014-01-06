@@ -7,5 +7,6 @@ branches:
 before_script:
   - composer install
   - npm install
+  - bundle install
   - mkdir www
   - ./vendor/pawka/phrozn/bin/phr.php build src &&  grunt prod
