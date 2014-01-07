@@ -7,7 +7,7 @@ branches:
 env:
   global:
   - DEPLOY_BRANCH: gh-pages
-  - DEPLOY_BRANCH: deploy
+  - DEPLOY_DIR: deploy
   - GIT_NAME: Helior Colorado
   - GIT_EMAIL: me@helior.info
   - GH_OWNWER: helior
@@ -23,14 +23,14 @@ script: true
 after_success:
 - git submodule add -b "$DEPLOY_BRANCH" https://"$GH_OAUTH_TOKEN"@github.com/"$GH_OWNER"/"$GH_PROJECT"
   "$DEPLOY_DIR" > /dev/null 2>&1
-- cd "$DEPLOY_BRANCH"
+- cd "$DEPLOY_DIR"
 - if git checkout "$DEPLOY_BRANCH"; then git checkout -b "$DEPLOY_BRANCH"; fi
 - git rm -r .
 - cp -R ../www/* .
 - cp ../.* .
 - git add -f .
-- git config user.email "$GIT_EMAIL"
-- git config.user.name "$GIT_NAME"
+- git config --global user.email "$GIT_EMAIL"
+- git config --global user.name "$GIT_NAME"
 - git commit -am 'Travis deploying "$TRAVIS_COMMIT_RANGE" to $DEPLOY_BRANCH'
 - git push https://"$GIT_OAUTH_TOKEN"@github.com/"$GH_OWNER"/"$GH_PROJECT" HEAD:"$DEPLOY_BRANCH"
   > /dev/null 2>&1
