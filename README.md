@@ -7,4 +7,4 @@ Website for the Inland Empire Drupal community.
 
 
 #### TODO:
-- Deploy to Github Pages.
+- Ensure paths to styles, scripts, and links work
