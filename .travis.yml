@@ -26,7 +26,7 @@ after_success:
 - git checkout "$DEPLOY_BRANCH" || git checkout -b "$DEPLOY_BRANCH"
 - git rm -r .
 - cp -R ../www/* .
-- cp ../.* .
+- cp ../www/.* .
 - git add -f .
 - git config --global user.email "$GIT_EMAIL"
 - git config --global user.name "$GIT_NAME"
