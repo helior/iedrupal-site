@@ -10,7 +10,7 @@ env:
   - DEPLOY_DIR: deploy
   - GIT_NAME: "Helior Colorado"
   - GIT_EMAIL: me@helior.info
-  - GH_OWNWER: helior
+  - GH_OWNER: helior
   - GH_PROJECT: iedrupal-site
   - secure: KFoimg/1d4xFenGJltBfgA2bGrU+ZObvZAmL9IouA8Qp9tsYDIaF5Ghry4Ey9qX6NeJ7uuX/4VyrhSeBv1aYRT4UL9vNk8y4VamawnsRI9j8dMMRWTv042I3TFO79quF/w4KKUtUMCyxbceePjJ8DqEBnqEw5/eabwwgrh8NsT8=
 before_install:
@@ -21,9 +21,9 @@ before_install:
 install: ./vendor/pawka/phrozn/bin/phr.php build src && grunt prod
 script: true
 after_success:
-- git submodule add -b "$DEPLOY_BRANCH" https://"$GH_OAUTH_TOKEN"@github.com/"$GH_OWNER"/"$GH_PROJECT" "$DEPLOY_DIR" > /dev/null 2>&1
+- git clone -b "$DEPLOY_BRANCH" https://"$GH_OAUTH_TOKEN"@github.com/"$GH_OWNER"/"$GH_PROJECT" "$DEPLOY_DIR" > /dev/null 2>&1
 - cd "$DEPLOY_DIR"
-- if git checkout "$DEPLOY_BRANCH"; then git checkout -b "$DEPLOY_BRANCH"; fi
+- git checkout "$DEPLOY_BRANCH" || git checkout -b "$DEPLOY_BRANCH"
 - git rm -r .
 - cp -R ../www/* .
 - cp ../.* .
