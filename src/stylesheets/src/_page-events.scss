@@ -1,0 +1,103 @@
+.page-events .header-bg {
+	background-image: image-url("luggage.jpg");
+}
+
+section.stack .stack-item {
+	border-top:1px solid #d5d5d5;
+	position:relative;
+	max-width:100%;
+	padding-top:5%;
+	@media #{$breakpoint-medium} {
+		padding-left:0;
+		padding-right:0;
+	}
+
+	&.first-item {
+		border-top: 0;
+	}
+
+	&.even {
+		background: #fafafa;
+
+		.item-content {
+			@media #{$breakpoint-large} {
+				margin-left:0;
+				padding-left:0;
+				margin-right:auto;
+				padding-right:0.9375em;
+			}
+		}
+
+		.image-box img {
+			@media #{$breakpoint-large} {
+				left:auto;
+				right:1.875em;
+			}
+		}
+	}
+
+	.item-content {
+		padding-bottom: 3.125em;
+		@media #{$breakpoint-large} {
+			padding-bottom:0;
+			padding-top:3.125em;
+			max-width:38.125em;
+			margin-left:auto;
+			padding-left:0.9375em;
+		}
+	}
+
+	h2 {
+		margin-bottom:0;
+	}
+
+	h3 {
+		color:#868686;
+		margin-bottom:1.5em;
+		text-align:center;
+	}
+
+	.text {
+		line-height:1.7;
+	}
+
+	.image-box {
+		margin-bottom:5%;
+
+		@media #{$breakpoint-large} {
+			position:relative;
+			float:right;
+			overflow:hidden;
+			height:590px;
+		}
+
+		@media #{$breakpoint-xlarge} {
+			height:640px;
+		}
+
+		@media #{$breakpoint-megascreen} {
+			height:690px;
+		}
+
+		img {
+			@include border-radius(5px);
+			@include box-shadow(rgba(0,0,0,0.2), 0px, 2px, 0, 0);
+
+			@media #{$breakpoint-large} {
+				height:500px;
+				max-width:none;
+				position:absolute;
+				top:0;
+				left:1.875em;
+			}
+
+			@media #{$breakpoint-xlarge} {
+				height:550px;
+			}
+
+			@media #{$breakpoint-megascreen} {
+				height:auto;
+			}
+		}
+	}
+}
