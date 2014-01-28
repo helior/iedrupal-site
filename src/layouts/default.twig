@@ -13,7 +13,8 @@
     {% block page %}
       <div class="container">
         {% include this.featuredImage ? 'featured-header.twig' : 'header.twig' %}
-        {{ content }}
+
+        {% block content %}{{ content }}{% endblock %}
       </div>
     {% endblock %}
     {% include 'footer.twig'%}
