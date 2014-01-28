@@ -64,6 +64,17 @@ h3{
 	}
 }
 
+p {
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.7;
+	margin-bottom: 1.875em;
+	text-rendering: optimizeLegibility;
+}
+ul {
+	text-rendering: optimizeLegibility;
+}
 
 body {
 	background: #f5f6f6;

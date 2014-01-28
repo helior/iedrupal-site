@@ -1,0 +1,36 @@
+/* Common Page */
+section.common {
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 3.0625em;
+	padding-bottom: 3.0625em;
+
+	@media #{$breakpoint-medium} {
+		padding-top: 3.5em;
+		padding-bottom: 3.5em;
+	}
+
+	@media #{$breakpoint-large} {
+		padding-top: 3.9375em;
+		padding-bottom: 3.9375em;
+	}
+
+	@media #{$breakpoint-xlarge} {
+		padding-top: 4.375em;
+		padding-bottom: 4.375em;
+	}
+
+	ul {
+		padding-left: 30px;
+		line-height: 1.3em;
+	}
+
+	img {
+		@include border-radius(4px);
+		margin-bottom: 20px;
+
+		@media #{$breakpoint-medium} {
+			margin-bottom: 40px;
+		}
+	}
+}
