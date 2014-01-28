@@ -20,6 +20,16 @@ section.common {
 		padding-bottom: 4.375em;
 	}
 
+	.common-wrapper {
+		padding-left: 1.875em;
+		padding-right: 1.875em;
+
+		@media #{$breakpoint-medium} {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+
 	ul {
 		padding-left: 30px;
 		line-height: 1.3em;
