@@ -30,5 +30,5 @@ after_success:
 - git add -f .
 - git config --global user.email "$GIT_EMAIL"
 - git config --global user.name "$GIT_NAME"
-- git commit -am 'Travis deploying "$TRAVIS_COMMIT_RANGE" to "$DEPLOY_BRANCH"'
+- git commit -am "Travis deploying $TRAVIS_COMMIT_RANGE to $DEPLOY_BRANCH"
 - git push https://"$GH_OAUTH_TOKEN"@github.com/"$GH_OWNER"/"$GH_PROJECT" HEAD:"$DEPLOY_BRANCH" > /dev/null 2>&1
