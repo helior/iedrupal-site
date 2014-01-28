@@ -1,7 +1,12 @@
 /* Variables */
 
 /* Media Queries */
-$breakpoint-medium: "only screen and (min-width : 768px)";
-$breakpoint-large: "only screen and (min-width : 1024px)";
-$breakpoint-xlarge: "only screen and (min-width : 1280px)";
-$breakpoint-megascreen: "only screen and (min-width : 1440px)";
+$break-medium: "768px";
+$break-large: "1024px";
+$break-xlarge: "1280px";
+$break-megascreen: "1440px";
+
+$breakpoint-medium: "only screen and (min-width : #{$break-medium})";
+$breakpoint-large: "only screen and (min-width : #{$break-large})";
+$breakpoint-xlarge: "only screen and (min-width : #{$break-xlarge})";
+$breakpoint-megascreen: "only screen and (min-width : #{$break-megascreen})";
