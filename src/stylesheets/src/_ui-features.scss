@@ -1,0 +1,66 @@
+section.features {
+	padding-top: 3.9375em;
+	padding-bottom: 4.375em;
+
+	@media #{$breakpoint-medium} {
+		padding-top: 4.5em;
+		padding-bottom: 5em;
+	}
+
+	@media #{$breakpoint-large} {
+		padding-top: 5.0625em;
+		padding-bottom: 5.625em;
+	}
+
+	@media #{$breakpoint-xlarge} {
+		padding-top: 5.625em;
+		padding-bottom: 6.25em;
+	}
+
+	.text {
+		line-height: 1.7;
+	}
+
+	.feature-item {
+		margin-bottom: 5.625em;
+
+		&.odd {
+
+			.image {
+				display: block;
+				margin: 0 auto 50px auto;
+
+				@media #{$breakpoint-medium} {
+					margin: 60px auto 0 auto;
+				}
+
+				@media #{$breakpoint-large} {
+					margin: 45px auto 0 auto;
+				}
+
+				@media #{$breakpoint-xlarge} {
+					margin: 25px auto 0 auto;
+				}
+			}
+		}
+
+		&.even {
+			.image {
+				display: block;
+				margin: 0 auto 50px auto;
+
+				@media #{$breakpoint-medium} {
+					margin: 80px auto 0 auto;
+				}
+
+				@media #{$breakpoint-large} {
+					margin: 50px auto 0 auto;
+				}
+
+				@media #{$breakpoint-xlarge} {
+					margin: 40px auto 0 auto;
+				}
+			}
+		}
+	}
+}
