@@ -6,6 +6,17 @@ Inland Empire Drupal site
 =============
 Website for the Inland Empire Drupal community.
 
+## Installation
+This project depends on Phrozn (via [Composer](https://getcomposer.org/)), Grunt (via [NPM](https://npmjs.org/)), and Compass (via [Bundler](http://bundler.io/))
+
+#### Install dependencies
+- Run `bundle install` to install Compass.
+- Run `npm install` to install Grunt.
+- Run `composer install` to install Phrozn.
+
+#### Build project
+To build the site files to the `www` directory, run `phr build src www`.
+Then, run `grunt dev` to compile sass/coffee scripts to the `www` directory to complete the app.
 
 #### TODO:
 - Ensure paths to styles, scripts, and links work
