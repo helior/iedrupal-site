@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    
+
     compass: {
       prod: {
         options: {
@@ -19,12 +19,25 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     uglify: {
       prod: {
         options: {
           compress: true,
           preserveComments: false
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/scripts',
+          src: '**/*.js',
+          dest: 'www/assets/js'
+        }]
+      },
+      dev: {
+        options: {
+          compress: false,
+          preserveComments: true,
+          beautify: true
         },
         files: [{
           expand: true,
@@ -72,6 +85,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   grunt.registerTask('prod', ['compass:prod', 'uglify:prod', 'htmlmin:prod', 'imagemin:prod']);
-  grunt.registerTask('dev', ['compass:dev']);
+  grunt.registerTask('dev', ['compass:dev', 'uglify:dev']);
   grunt.registerTask('default', 'Does nothing.', function() {grunt.log.writeln('Available tasks to run are "prod" and "dev".')});
 }
