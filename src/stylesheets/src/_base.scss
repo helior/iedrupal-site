@@ -47,6 +47,7 @@ h3{
 	}
 	h3{
 		font-size: 1.125em;
+		-webkit-text-stroke: 0.5px;
 	}
 }
 @media only screen and (min-width:1024px) {
@@ -80,4 +81,5 @@ body {
 .row {
 	padding-left: 0.9375em;
 	padding-right: 0.9375em;
+	max-width: 80em;
 }
