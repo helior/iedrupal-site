@@ -19,7 +19,7 @@ content:
     directories: [events]
     defaults:
       type: event
-      upcoming: false
+      layout: common-page.twig
       title:
       machine_title:
       presenters: []
