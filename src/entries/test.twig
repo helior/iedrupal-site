@@ -2,17 +2,21 @@ pageId: test
 title: This is a provider test
 permalink: :pageId/
 layout: common-page.twig
-skip: true
+skip: false
 providers:
   events:
     provider: EventsCollection
+    directory: entries/events
+    filter: none
+    sort: asc
+    limit: -1
 ---
 
 <p>Hello world.</p>
 
-{% for thing in this.providers.events %}
+{% for event in this.providers.events %}
   <li>
-    <h3>{{ thing.name }}</h3>
-    <h6>{{ thing.ordinal }}</h6>
+    <h3>{{ event.title }}</h3>
+    <h6>{{ event.date }}</h6>
   </li>
 {% endfor %}
