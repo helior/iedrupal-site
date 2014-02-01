@@ -1,81 +1,31 @@
 pageId: events
 title: Past Events
 permalink: :pageId/
+providers:
+  events:
+    provider: EventsCollection
+    directory: entries/events
 ---
 <section class="stack">
-
-	<article class="stack-item row odd first-item min-full-height">
-	  <div class="image-box large-6 columns">
-	    <a href=""><img src="http://farm3.staticflickr.com/2717/4241597802_9819ccb0f4_b.jpg" alt="Tour" /></a>
-	  </div>
-	  <div class="large-6 columns">
-	    <div class="item-content item-content-left">
-        <a href=""><h2>What's new in Drupal 8: Core Modules</h2></a>
-        <h3>Shiny new things you can actually touch!</h3>
-        <div class="text">
-          Lebowski ipsum another Caucasian, Gary. Dolor sit amet, consectetur adipiscing elit praesent ac magna justo pellentesque ac lectus. Call the medics, Dude. Quis elit blandit fringilla. Fuck me, man! That kid's already spent all the money! A ut turpis praesent felis ligula, malesuada suscipit malesuada. Show me what you got. Nihilist. Dipshit with a nine-toed woman. Non, ultrices non urna sed orci ipsum, placerat id condimentum rutrum, rhoncus ac lorem.
-        </div>
-	    </div>
-	  </div>
-	</article>
-
-	<article class="stack-item row even min-full-height">
-    <div class="image-box large-6 large-pull-6 columns">
-      <img src="http://farm4.staticflickr.com/3321/3181034306_b412eb6fda_b.jpg" />
+{% for event in this.providers.events %}
+  {% set mainclasses = ['stack-item', 'row', 'min-full-height', cycle(['odd', 'even'], loop.index0)] %}
+  {% if loop.first %}{% set mainclasses = mainclasses|merge(['first-item']) %}{% endif %}
+  {% if loop.last %}{% set mainclasses = mainclasses|merge(['last-item']) %}{% endif %}
+  {% set imageclasses = ['image-box', 'columns', 'large-6'] %}
+  {% if loop.index0 is odd %}{% set imageclasses = imageclasses|merge(['large-pull-6']) %}{% endif %}
+  {% set contentclasses = ['large-6', 'columns'] %}
+  {% if loop.index0 is odd %}{% set contentclasses = contentclasses|merge(['large-push-6']) %}{% endif %}
+  <article class="{{ mainclasses|join(' ') }}">
+    <div class="{{ imageclasses|join(' ') }}">
+      <a href=""><img src="http://farm3.staticflickr.com/2717/4241597802_9819ccb0f4_b.jpg" /></a>
     </div>
-    <div class="large-6 large-push-6 columns">
-      <div class="item-content item-content-right">
-        <h2>Vesper Why Save The World</h2>
-        <h3>You couldn't turn the radio down.</h3>
-        <div class="text">
-          I have no choice but to tell these bums that they should do whatever is necessary to recover their money from you, Jeffrey Lebowski. Aliquam placerat posuere neque, at dignissim magna ullamcorper in aliquam. …and even if he's a lazy man, and the Dude was certainly that—quite possibly the laziest in Los Angeles County. Sagittis massa ac tortor ultrices faucibus curabitur eu. What do you mean "brought it bowling"? I didn't rent it shoes. I'm not buying it a fucking beer. He's not gonna take your fucking turn, Dude. Mi sapien, ut ultricies ipsum morbi eget risus nulla nullam vel nisi enim.
-        </div>
+    <div class="{{ contentclasses|join(' ') }}">
+      <div class="item-content {{ cycle(['item-content-left', 'item-content-right'], loop.index0) }}">
+        <a href="{{ event.permalink }}"><h2>{{ event.title }}</h2></a>
+        <h3>{{ event.subtitle }}</h3>
+        <div class="text">{{ event.teaser }}</div>
       </div>
     </div>
-	</article>
-
-	<article class="stack-item row odd min-full-height">
-    <div class="image-box large-6 columns">
-      <img src="http://farm7.staticflickr.com/6173/6188907583_ae96f7e956_b.jpg" />
-    </div>
-    <div class="large-6 columns">
-	    <div class="item-content item-content-left">
-	      <h2>Transmitting Waves</h2>
-	      <h3>Whatever you like, so long you keep it real.</h3>
-	      <div class="text">
-          One a those days, huh. Wal, a wiser fella than m'self once said, sometimes you eat the bar and sometimes the bar, wal, he eats you. Vel auctor ante morbi id urna vel felis lacinia placerat vestibulum. Eight-year-olds, Dude. Turpis nulla, viverra nec volutpat ac, ornare id lectus cras pharetra. Wonderful woman. Very free-spirited. We're all very fond of her. Faucibus tristique nullam non accumsan justo nulla facilisi integer interdum elementum nulla, nec.
-	      </div>
-	    </div>
-    </div>
-	</article>
-
-	<article class="stack-item row even min-full-height">
-    <div class="image-box large-6 large-pull-6 columns">
-      <img src="http://farm4.staticflickr.com/3507/3226351837_38b253df43_b.jpg" />
-    </div>
-    <div class="large-6 large-push-6 columns">
-      <div class="item-content item-content-right">
-        <h2>My TV isn't HD.</h2>
-        <h3>Mangos, peaches, and lime.. Yeah, the sweet life.</h3>
-        <div class="text">
-          Goodnight, sweet prince. Eleifend nisl euismod ac. Mein nommen iss Karl. Is hard to verk in zese clozes. Maecenas vitae eros velit, eu suscipit erat integer purus lacus, pretium vel venenatis. Keep your ugly fucking goldbricking ass out of my beach community! Eu, volutpat non erat donec a metus ac eros. They call Los Angeles the City of Angels. I didn't find it to be that exactly, but I'll allow as there are some nice folks there. 'Course, I can't say I seen London, and I never been to France, and I ain't never seen no queen in her damn undies as the fella says. But I'll tell you what, after seeing Los Angeles and thisahere story I'm about to unfold —wal, I guess I seen somethin' ever' bit as stupefyin' as ya'd see in any a those other places, and in English too, so I can die with a smile on my face without feelin' like the good Lord gypped me. Dictum aliquet nulla consectetur egestas placerat maecenas pulvinar nisl et nisl rhoncus at volutpat.
-        </div>
-      </div>
-    </div>
-	</article>
-
-	<article class="stack-item row odd min-full-height">
-    <div class="image-box large-6 columns">
-      <img src="http://farm5.staticflickr.com/4154/5019201443_6bb7ff1a02_b.jpg" />
-    </div>
-    <div class="large-6 columns">
-      <div class="item-content item-content-left">
-        <h2>Landscaping &amp; House Keeping</h2>
-        <h3>Why see the world while you got the beach?</h3>
-        <div class="text">
-          Yeah. Roadie for Metallica. Speed of Sound Tour. Felis blandit in libero turpis. That guy treats objects like women, man. Laoreet et molestie sed, volutpat et erat nulla ut orci quis neque consectetur tincidunt. It's all a goddamn fake. Like Lenin said, look for the person who will benefit. And you will, uh, you know, you'll, uh, you know what I'm trying to say. Aliquam erat volutpat donec aliquam orci.
-        </div>
-      </div>
-    </div>
-	</article>
+  </article>  
+{% endfor %}
 </section>
