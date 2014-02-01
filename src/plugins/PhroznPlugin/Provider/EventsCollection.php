@@ -10,7 +10,7 @@ class EventsCollection extends Base implements Provider {
 
   protected function getDefaultConfig() {
     return array(
-      'config' => 'entries',
+      'directory' => 'entries',
       'filter' => 'past', // "none" "past", "upcoming"
       'sort' => 'desc', // "asc", "desc"
       'limit' => '0',
