@@ -68,15 +68,16 @@ section.stack .stack-item {
 			position:relative;
 			float:right;
 			overflow:hidden;
-			height:590px;
+			height:400px;
+			margin-bottom:4%;
 		}
 
 		@media #{$breakpoint-xlarge} {
-			height:640px;
+			height:450px;
 		}
 
 		@media #{$breakpoint-megascreen} {
-			height:690px;
+			height:600px;
 		}
 
 		img {
@@ -84,7 +85,7 @@ section.stack .stack-item {
 			@include box-shadow(rgba(0,0,0,0.2), 0px, 2px, 0, 0);
 
 			@media #{$breakpoint-large} {
-				height:500px;
+				height:400px;
 				max-width:none;
 				position:absolute;
 				top:0;
@@ -92,7 +93,7 @@ section.stack .stack-item {
 			}
 
 			@media #{$breakpoint-xlarge} {
-				height:550px;
+				height:450px;
 			}
 
 			@media #{$breakpoint-megascreen} {

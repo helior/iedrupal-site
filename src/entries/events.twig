@@ -23,7 +23,10 @@ providers:
       <div class="item-content {{ cycle(['item-content-left', 'item-content-right'], loop.index0) }}">
         <a href="{{ event.permalink }}"><h2>{{ event.title }}</h2></a>
         <h3>{{ event.subtitle }}</h3>
-        <div class="text">{{ event.teaser }}</div>
+        <div class="text">
+          <p>{{ event.teaser }}</p>
+          <p><a class="readmore" href="{{ event.permalink }}">Read more →</a></p>
+        </div>
       </div>
     </div>
   </article>

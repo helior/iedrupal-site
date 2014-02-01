@@ -94,3 +94,9 @@ body {
 	padding-right: 0.9375em;
 	max-width: 80em;
 }
+
+.readmore {
+	background-color: #fff;
+	@include border-radius(25px);
+	padding: 1px 8px;
+}
