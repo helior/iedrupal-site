@@ -17,7 +17,7 @@ providers:
   {% if loop.index0 is odd %}{% set contentclasses = contentclasses|merge(['large-push-6']) %}{% endif %}
   <article class="{{ mainclasses|join(' ') }}">
     <div class="{{ imageclasses|join(' ') }}">
-      <a href=""><img src="http://farm3.staticflickr.com/2717/4241597802_9819ccb0f4_b.jpg" /></a>
+      <a href="{{ event.permalink }}"><img src="http://farm3.staticflickr.com/2717/4241597802_9819ccb0f4_b.jpg" /></a>
     </div>
     <div class="{{ contentclasses|join(' ') }}">
       <div class="item-content {{ cycle(['item-content-left', 'item-content-right'], loop.index0) }}">
@@ -26,6 +26,6 @@ providers:
         <div class="text">{{ event.teaser }}</div>
       </div>
     </div>
-  </article>  
+  </article>
 {% endfor %}
 </section>
