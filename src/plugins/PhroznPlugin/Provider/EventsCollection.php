@@ -74,8 +74,50 @@ class EventsCollection extends Base implements Provider {
       return array_slice($content, 0, $config['limit']);
     }
 
+    $this->processContent($content);
+
     return $content;
 	}
+
+  /**
+   * We have unprocessed permalinks, so this method was copied from Phrozn\Site\View\OutputPath\Entry\Parametrized.
+   */
+  protected function processContent(&$content) {
+    foreach ($content as &$item) {
+      $path = $permalink = $item['permalink'];
+
+      foreach ($item as $name => $param) {
+        // apply only scalar params
+        if (is_scalar($param)) {
+          $path = str_replace(':' . $name, $this->normalize($param), $path);
+        }
+      }
+
+      // $path = rtrim($this->getView()->getOutputDir(), '/') . '/' . ltrim($path, '/');
+
+      if (is_null($permalink) && substr($path, -5) !== '.html') {
+        $path .= '.html';
+      }
+      error_log($path);
+      $item['permalink'] = $path;
+    }
+  }
+
+  /**
+   * This was also copied from Phrozn\Site\View\OutputPath\Entry\Parametrized.
+   */
+  private function normalize($param, $space = '-') {
+    $param = trim($param);
+    // preserve accented chars
+    if (function_exists('iconv')) {
+      $param = @iconv('utf-8', 'us-ascii//TRANSLIT', $param);
+    }
+    $param = preg_replace('/[^a-zA-Z0-9 -]/', '', $param);
+    $param = strtolower($param);
+    $param = preg_replace('/[\s-]+/', $space, $param);
+
+    return $param;
+  }
 
   protected static function filter_past($value) {
     $event_time = strtotime($value['date']);
