@@ -1,6 +1,45 @@
 pageId: index
 featuredImage: luggage.jpg
+layout: no-header.twig
+providers:
+  upcoming:
+    provider: EventsCollection
+    directory: entries/events
+    filter: upcoming
+    sort: asc
+    limit: 1
 ---
+{# This is such a fucking hack. I Phrozn won't allow twig layout includes from this scope (hence, the redundant navigation) #}
+{# Also, provider data is overridden when rendering outer layouts, so it's not possible to do anything interesting with parent layouts. #}
+<section class="header bg-cover" style="background-image:url({{['', this.imagepath, this.featuredImage]|join(this.path_delimiter)}});">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <a href="/" title="IE Drupal">
+          <img id="logo" src="/media/images/druplicon.png" alt="IE Drupal" />
+        </a>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="index.html#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul id="menu-navigation-menu" class="right">
+        <li><a href="/events">Events</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/venue">Venue</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  {% if this.providers.upcoming %}
+    <h1>{{ this.providers.upcoming.0.title }}<h1>
+  {% else %}
+  <h1>Upcoming Event!!</h1>
+  {% endif %}
+</section>
+
+
 <section class="features">
   <div class="feature-item odd row">
     <div class="medium-6 columns">
