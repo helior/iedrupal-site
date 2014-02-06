@@ -9,7 +9,7 @@ providers:
     sort: asc
     limit: 1
 ---
-{# This is such a fucking hack. I Phrozn won't allow twig layout includes from this scope (hence, the redundant navigation) #}
+{# This is such a hack. Phrozn won't allow twig layout includes from this scope (hence, the redundant navigation) #}
 {# Also, provider data is overridden when rendering outer layouts, so it's not possible to do anything interesting with parent layouts. #}
 <section class="header bg-cover" style="background-image:url({{['', this.imagepath, this.featuredImage]|join(this.path_delimiter)}});">
   <nav class="top-bar">
@@ -32,14 +32,31 @@ providers:
     </section>
   </nav>
 
+  <div class="upcoming">
   {% if this.providers.upcoming %}
-    <h1>{{ this.providers.upcoming.0.title }}<h1>
+    <div class="announcement">
+      <span class="intro">Next Meetup</span>
+      <time datetime="2014-09-20" class="icon-calendar-date">
+        <em>Saturday</em>
+        <strong>June</strong>
+        <span>20</span>
+      </time>
+      <span class="title">Something Something Hypermedia APIs</span>
+      <span class="attribution">with Helior Colorado</span>
+      <span><a class="readmore" href="{{ event.permalink }}">Read more →</a></span>
+    </div>
+      {# <h1><a href="{{ this.providers.upcoming.0.permalink }}" title="{{ this.providers.upcoming.0.title }}">{{ this.providers.upcoming.0.title }}</a></h1> #}
+      {# <div class="announcement">with {{ this.providers.upcoming.0.presenters }}</div> #}
   {% else %}
-  <h1>Upcoming Event!!</h1>
+    <h1>No upcoming events.</h1>
+    <span class="annoucement"><a href="{{ this.meetupcom.url }}">Suggest one on meetup.com!</a></span>
   {% endif %}
+  </div>
+
+  <div class="page-learn-more hide-for-small"><a class="icon-next-feature-white" href="#content">Learn More</a></div>
 </section>
 
-
+<div id="content"></div>
 <section class="features">
   <div class="feature-item odd row">
     <div class="medium-6 columns">
