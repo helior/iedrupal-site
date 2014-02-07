@@ -14,13 +14,5 @@ skip: [/\.swp$/, /\.bak$/, /\.DS_Store$/, /\.js$/]
 copy: [media, .nojekyll, CNAME]
 site:
   output: www
-content:
-  event:
-    directories: [events]
-    defaults:
-      type: event
-      layout: common-page.twig
-      title:
-      machine_title:
-      presenters: []
-      permalink: /events/:date/:machine_title/
+meetupcom:
+  url: http://www.meetup.com/inland-empire-drupal/

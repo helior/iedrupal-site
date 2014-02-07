@@ -4,6 +4,8 @@
     {% block head %}
       <meta charset="utf-8">
       <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+      <meta name="generator" content="Phrozn">
+      <meta name="author" content="Helior Colorado">
       <title>{% block title %}{{this.title ? "%s | "|format(this.title) : ''}}Inland Empire Drupal{% endblock %}</title>
       <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css" rel="stylesheet" type="text/css" />
       <link href="/assets/css/app.css" rel='stylesheet' type='text/css'/>
@@ -13,7 +15,7 @@
     {% block page %}
       <div class="container">
         {% include this.featuredImage ? 'featured-header.twig' : 'header.twig' %}
-
+        <div id="content"></div>
         {% block content %}{{ content }}{% endblock %}
       </div>
     {% endblock %}
@@ -24,3 +26,4 @@
     {% endblock %}
   </body>
 </html>
+<!-- Last generated on {{ "now"|date("m/d/Y") }} -->

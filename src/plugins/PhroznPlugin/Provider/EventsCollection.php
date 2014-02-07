@@ -71,7 +71,7 @@ class EventsCollection extends Base implements Provider {
 
     // Limiting
     if ($config['limit'] != 0) {
-      return array_slice($content, 0, $config['limit']);
+      $content = array_slice($content, 0, $config['limit']);
     }
 
     $this->processContent($content);

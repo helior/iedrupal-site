@@ -17,50 +17,51 @@ h1, h2, h3, h4, h5, h6{
 	margin-top: 0;
 	margin-bottom: 1em;
 	line-height: 1.3125em;
-}
-@media only screen and (min-width:768px) {
-	h1, h2, h3, h4, h5, h6{
+
+	@media #{$breakpoint-medium} {
 		line-height:1.5;
 	}
 }
+
 h1 {
 	color:#fff;
 	text-align:center;
 	text-transform:uppercase;
 	line-height:1.6;
 	font-size:20px;
+	@media #{$breakpoint-medium} {
+		font-size:28px;
+		white-space:pre-line;
+	}
+	@media #{$breakpoint-large} {
+		font-size:43px;
+	}
+	@media #{$breakpoint-xlarge} {
+		font-size:50px;
+	}
 }
 h2 {
 	text-align:center;
 	line-height:1.7;
 	font-size:18px;
+	@media #{$breakpoint-medium} {
+		font-size:20px;
+		-webkit-text-stroke:0.5px;
+	}
+	@media #{$breakpoint-large} {
+		font-size:22px;
+		white-space:pre-line;
+	}
+	@media #{$breakpoint-xlarge} {
+		font-size:24px;
+	}
 }
 h3{
 	line-height: 1.7;
 	font-size: 16px;
-}
-@media only screen and (min-width:768px) {
-	h1 {font-size:28px;white-space:pre-line;}
-	h2{
-		font-size:20px;
-		-webkit-text-stroke:0.5px;
-	}
-	h3{
+	@media #{$breakpoint-medium} {
 		font-size: 1.125em;
 		-webkit-text-stroke: 0.5px;
-	}
-}
-@media only screen and (min-width:1024px) {
-	h1 {font-size:43px;}
-	h2 {
-		font-size:22px;
-		white-space:pre-line;
-	}
-}
-@media only screen and (min-width:1280px) {
-	h1 {font-size:50px;}
-	h2 {
-		font-size:24px;
 	}
 }
 
@@ -99,4 +100,86 @@ body {
 	background-color: #fff;
 	@include border-radius(25px);
 	padding: 1px 8px;
+}
+
+.hide-for-small {
+	display: none !important;
+	@media #{$breakpoint-medium} {
+		display: inherit !important;
+	}
+}
+
+.page-learn-more {
+	position: absolute;
+	left: 50%;
+	bottom: 8%;
+	margin-left: -93px;
+	z-index: 5;
+
+	a {
+		display: inline-block;
+		height: 50px;
+		line-height: 50px;
+		padding-left: 10px;
+		padding-right: 10px;
+		color: #fff;
+		font-family: "Montserrat","Helvetica","Arial";
+		@media #{$breakpoint-medium} {
+			-webkit-text-stroke: 0.5px;
+		}
+	}
+}
+
+time.icon-calendar-date{
+  font-size: 0.4em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #fff;
+  margin: 2em auto;
+  @include border-radius(0.3em);
+  // @include box-shadow(#bdbdbd, 1px, 2px, 3px, 4px, 5px, 1px);
+  box-shadow: 0 1px 0 #aaa, 0 2px 0 #fff, 0 3px 0 #aaa, 0 4px 0 #fff, 0 5px 0 #aaa, 0 0 0 1px #666;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) skewY(0deg);
+  -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+  @media #{$breakpoint-medium} {
+  	font-size: 0.5em;
+  }
+  @media #{$breakpoint-xlarge} {
+  	font-size: 0.6em;
+  }
+
+  span, strong, em {
+  	display: block;
+	  width: 100%;
+	  font-size: 1em;
+	  font-weight: bold;
+	  font-style: normal;
+	  text-align: center;
+  }
+  strong {
+  	position: absolute;
+	  top: 0;
+	  padding: 0.4em 0;
+	  color: #fff;
+	  background-color: #e0393e;
+	  border-bottom: 1px dashed #FF7C7C;
+	  box-shadow: 0 2px 0 #e0393e;
+  }
+  em {
+  	position: absolute;
+	  bottom: 0.3em;
+	  color: #e0393e;
+  }
+  span {
+  	width: 100%;
+	  font-size: 2.8em;
+	  letter-spacing: -0.05em;
+	  padding-top: 0.8em;
+	  color: #2f2f2f;
+  }
 }
