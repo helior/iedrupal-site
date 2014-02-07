@@ -29,21 +29,62 @@ section.header {
 		position:absolute;
 		padding-left:5%;
 		padding-right:5%;
+		color:#fff;
+		text-align:center;
 
-		.announcement {
-			font-size:25px;
-			color:#fff;
-			text-align:center;
-		}
 		span.intro {
 			text-transform: uppercase;
+			font-size:20px;
+			@media #{$breakpoint-medium} {
+				font-size:25px;
+			}
 		}
 		span.title {
-			text-transform: uppercase;
-			font-size: 25px
+			display:block;
+			max-width:75%;
+			font-family: "Montserrat","Helvetica","Arial";
+			font-weight: normal;
+			font-style: normal;
+			font-size:20px;
+			color: #fff;
+			margin: 0 auto;
+			text-rendering: optimizeLegibility;
+			text-align:center;
+			text-transform:uppercase;
+			line-height:1.1;
+			@media #{$breakpoint-medium} {
+				max-width:65%;
+				font-size:28px;
+				white-space:pre-line;
+				line-height:1.2;
+			}
+			@media #{$breakpoint-large} {
+				font-size:43px;
+			}
+			@media #{$breakpoint-xlarge} {
+				font-size:50px;
+			}
+			&.no-event {
+				font-family: "Helvetica","Arial";
+				font-weight: bold;
+				margin-bottom: 0.3em;
+			}
 		}
 		span.attribution {
-			font-size:18px;
+			display:block;
+			font-size:15px;
+			font-style:italic;
+			margin-bottom:1em;
+			@media #{$breakpoint-medium} {
+				font-size:18px;
+			}
+			@media #{$breakpoint-large} {
+				font-size:20px
+			}
+		}
+
+		.readmore{
+			font-size:13px;
 		}
 	}
 }

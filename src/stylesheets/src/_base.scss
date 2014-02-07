@@ -131,7 +131,7 @@ body {
 }
 
 time.icon-calendar-date{
-  font-size: 0.5em; /* change icon size */
+  font-size: 0.4em; /* change icon size */
   display: block;
   position: relative;
   width: 7em;
@@ -146,6 +146,12 @@ time.icon-calendar-date{
   -webkit-transform: rotate(0deg) skewY(0deg);
   -webkit-transform-origin: 50% 10%;
   transform-origin: 50% 10%;
+  @media #{$breakpoint-medium} {
+  	font-size: 0.5em;
+  }
+  @media #{$breakpoint-xlarge} {
+  	font-size: 0.6em;
+  }
 
   span, strong, em {
   	display: block;
