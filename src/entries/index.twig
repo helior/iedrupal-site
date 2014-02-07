@@ -34,22 +34,19 @@ providers:
 
   <div class="upcoming">
   {% if this.providers.upcoming %}
-    <div class="announcement">
-      <span class="intro">Next Meetup</span>
-      <time datetime="2014-09-20" class="icon-calendar-date">
-        <em>Saturday</em>
-        <strong>June</strong>
-        <span>20</span>
-      </time>
-      <span class="title">Something Something Hypermedia APIs</span>
-      <span class="attribution">with Helior Colorado</span>
-      <span><a class="readmore" href="{{ event.permalink }}">Read more →</a></span>
-    </div>
-      {# <h1><a href="{{ this.providers.upcoming.0.permalink }}" title="{{ this.providers.upcoming.0.title }}">{{ this.providers.upcoming.0.title }}</a></h1> #}
-      {# <div class="announcement">with {{ this.providers.upcoming.0.presenters }}</div> #}
+    {% set upcoming = this.providers.upcoming.0 %}
+    <span class="intro">Next Meetup</span>
+    <time datetime="{{ upcoming.date }}" class="icon-calendar-date">
+      <em>{{ upcoming.date|date('l')}}</em>
+      <strong>{{ upcoming.date|date('F')}}</strong>
+      <span>{{ upcoming.date|date('d')}}</span>
+    </time>
+    <span class="title">{{ upcoming.title }}</span>
+    <span class="attribution">with {{ upcoming.presenters }}</span>
+    <span><a href="{{ upcoming.permalink }}" class="readmore">Read more →</a></span>
   {% else %}
-    <h1>No upcoming events.</h1>
-    <span class="annoucement"><a href="{{ this.meetupcom.url }}">Suggest one on meetup.com!</a></span>
+    <span class="title no-event">No upcoming events :(</span>
+    <span><a class="readmore" href="{{ this.meetupcom.url }}">Suggest one on meetup.com! ➤</a></span>
   {% endif %}
   </div>
 
