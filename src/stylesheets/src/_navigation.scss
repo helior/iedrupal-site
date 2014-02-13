@@ -98,7 +98,6 @@
 			display:block;
 			width:16px;
 			height:0;
-			-webkit-box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
 			box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
 		}
 	}
@@ -124,13 +123,9 @@
 	position:relative;
 	width:auto;
 	left:0;
-	-webkit-transition: left 300ms ease-out;
-	-moz-transition: left 300ms ease-out;
 	transition: left 300ms ease-out;
 
 	@media #{$breakpoint-medium} {
-		-webkit-transition: none 0 0;
-		-moz-transition: none 0 0;
 		transition: none 0 0;
 	}
 

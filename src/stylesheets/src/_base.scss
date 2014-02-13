@@ -46,7 +46,7 @@ h2 {
 	font-size:18px;
 	@media #{$breakpoint-medium} {
 		font-size:20px;
-		-webkit-text-stroke:0.5px;
+		text-stroke:0.5px;
 	}
 	@media #{$breakpoint-large} {
 		font-size:22px;
@@ -61,7 +61,7 @@ h3{
 	font-size: 16px;
 	@media #{$breakpoint-medium} {
 		font-size: 1.125em;
-		-webkit-text-stroke: 0.5px;
+		text-stroke: 0.5px;
 	}
 }
 
@@ -98,7 +98,7 @@ body {
 
 .readmore {
 	background-color: #fff;
-	@include border-radius(25px);
+	border-radius: 25px;
 	padding: 1px 8px;
 }
 
@@ -138,13 +138,11 @@ time.icon-calendar-date{
   height: 7em;
   background-color: #fff;
   margin: 2em auto;
-  @include border-radius(0.3em);
-  // @include box-shadow(#bdbdbd, 1px, 2px, 3px, 4px, 5px, 1px);
+  border-radius: 0.3em;
   box-shadow: 0 1px 0 #aaa, 0 2px 0 #fff, 0 3px 0 #aaa, 0 4px 0 #fff, 0 5px 0 #aaa, 0 0 0 1px #666;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: rotate(0deg) skewY(0deg);
-  -webkit-transform-origin: 50% 10%;
+  backface-visibility: hidden;
+  transform: rotate(0deg) skewY(0deg);
   transform-origin: 50% 10%;
   @media #{$breakpoint-medium} {
   	font-size: 0.5em;

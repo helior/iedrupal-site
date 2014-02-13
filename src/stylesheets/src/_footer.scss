@@ -29,8 +29,6 @@
 		height: 28px;
 		left: 73px;
 		top: 139px;
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
 		box-shadow: none;
 		color: transparent;
 	}
@@ -52,8 +50,6 @@
 	min-width: +mq-desktop;
 	margin: 0 auto;
 	padding: 20px;
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
@@ -67,8 +63,6 @@
 	background: -moz-linear-gradient(left, #e6455a, #ffb67a, #5ddfc8, #33ccff, #e6455a);
 	background: -o-linear-gradient(left, #e6455a, #ffb67a, #5ddfc8, #33ccff, #e6455a);
 	background: linear-gradient(left, #e6455a, #ffb67a, #5ddfc8, #33ccff, #e6455a);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
 	z-index: 100;
 }

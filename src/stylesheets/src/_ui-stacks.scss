@@ -81,8 +81,8 @@ section.stack .stack-item {
 		}
 
 		img {
-			@include border-radius(5px);
-			@include box-shadow(rgba(0,0,0,0.2), 0px, 2px, 0, 0);
+			border-radius: 5px;
+			box-shadow: 0px, 2px, 0, 0, rgba(0,0,0,0.2);
 
 			@media #{$breakpoint-large} {
 				height:400px;
