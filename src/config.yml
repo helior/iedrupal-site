@@ -1,8 +1,6 @@
 --- # Site configuration
 path_delimiter: /
 imagepath: media/images
-entries:
-    layout: default.twig
 
 # Files to skip - list of preg expressions is expected
 # These are matched against the whole path of the files
