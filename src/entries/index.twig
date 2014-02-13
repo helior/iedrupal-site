@@ -42,7 +42,9 @@ providers:
       <span>{{ upcoming.date|date('d')}}</span>
     </time>
     <span class="title">{{ upcoming.title }}</span>
+    {% if upcoming.presenters %}
     <span class="attribution">with {{ upcoming.presenters }}</span>
+    {% endif %}
     <span><a href="{{ upcoming.permalink }}" class="readmore">Read more →</a></span>
   {% else %}
     <span class="title no-event">No upcoming events :(</span>
@@ -52,6 +54,7 @@ providers:
 
   <div class="page-learn-more hide-for-small"><a class="icon-next-feature-white" href="#content">Learn More</a></div>
 </section>
+{# End horrible hack #}
 
 <div id="content"></div>
 <section class="features">
