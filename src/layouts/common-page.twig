@@ -3,7 +3,9 @@
 {% block content %}
 	<section class="common">
 		<div class="common-wrapper">
-			{{ content }}
+			{% block common_content %}
+				{{ content }}
+			{% endblock %}
 		</div>
 	</section>
 {% endblock %}

@@ -16,3 +16,5 @@ site:
   output: www
 meetupcom:
   url: http://www.meetup.com/inland-empire-drupal/
+disqus:
+  shortname: iedrupalsite
